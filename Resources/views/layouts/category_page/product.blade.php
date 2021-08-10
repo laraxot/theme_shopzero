@@ -7,8 +7,7 @@
 
                 @if (!$row->image_src == '')
 
-                    <img src="{{ $row->image_src }}"
-                        class="w-100"
+                    <img src="{{ $row->image_src }}" class="w-100"
                         style="width: 280px;margin: 0px;border-radius: 15px;margin-bottom: 0;padding: 7px;">
 
                 @endif
@@ -19,10 +18,10 @@
                     {{ $row->title }}</h5>
                 <p
                     style="float: right;display: inline-block;width: 55px;font-family: Montserrat, sans-serif;font-weight: bold;color: rgb(120,127,135); margin-right:8px; margin-top: 13px">
-                    € {{ number_format(floatval($row->prices[0]->price),2,',','') }}</p>
+                    € {{ number_format(floatval($row->prices[0]->price), 2, ',', '') }}</p>
             </div>
 
-            {{-- @foreach($row->prices as $value) {{ $value->price; }} @endforeach --}} {{-- USALO PER AVERE TUTTI I PREZZI, ANCHE QUELLI MAXI --}}
+            {{-- @foreach ($row->prices as $value) {{ $value->price; }} @endforeach --}} {{-- USALO PER AVERE TUTTI I PREZZI, ANCHE QUELLI MAXI --}}
 
             <div class="w-100" style="display: inline-block;padding: 11px;">
                 <p style="display: inline-block;padding-bottom: 0px;width: 255px;margin-left: 0px;margin-bottom: 0px;">
@@ -49,16 +48,23 @@
         </div>
     </div>
 
-    <div style="display: inline-block; float: right; padding-right: 25px; padding-top: 50px;" onclick="changeColors(this)">
+    <div style="display: inline-block; float: right; padding-right: 25px; padding-top: 40px; padding-bottom: 20px"
+        onclick="changeColors(this)">
         <div style="visibility: visible;" class="plus">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-plus-circle" style="position: absolute;float: right;font-size: 20px;margin-right: -21px;">
-                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
-                <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                class="bi bi-plus-circle" style="position: absolute;float: right;font-size: 20px;margin-right: -21px;">
+                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z">
+                </path>
+                <path fill-rule="evenodd"
+                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z">
+                </path>
             </svg>
         </div>
         <div style="visibility: hidden;" class="dash">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-dash-circle" style="position: absolute;font-size: 20px;">
-                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                class="bi bi-dash-circle" style="position: absolute;font-size: 20px;">
+                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z">
+                </path>
                 <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"></path>
             </svg>
         </div>
@@ -70,6 +76,7 @@
 
 @endforeach
 
+<div style="margin-bottom: 80px"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -93,5 +100,4 @@
         }
 
     }
-
 </script>
