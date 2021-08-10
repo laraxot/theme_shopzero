@@ -1,5 +1,5 @@
 @php
-    $title=XotModel('tag')::with('post')->where('id', app('request')->input('id'))->get()->first()->title;
+    //$title=XotModel('tag')::with('post')->where('id', app('request')->input('id'))->get()->first()->title;
 @endphp
 
 <a href="{{ route('container0.index', ['lang' => App::getLocale(), 'container0' => '/']) }}"
@@ -11,6 +11,6 @@
             <path fill-rule="evenodd"
                 d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z">
             </path>
-        </svg>{{ $title }}
+        </svg>{{-- $title --}}
     </h5>
 </a>

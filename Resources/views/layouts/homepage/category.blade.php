@@ -9,6 +9,8 @@
             //dddx();
             //$profile_panel->relatedUrl(['related_name' => 'bell_boy', 'act' => 'index_edit'])
             ///it/tags/le-classiche/products
+            //$url = Panel::get('product');
+            //dddx($url);
         @endphp
         <a href="{{ route('container0.index', ['lang' => App::getLocale(), 'container0' => 'product', 'id' => $row->id]) }}" style="text-decoration: none; color: rgb(39, 39, 39)">
             <div class="w-100"><img class="w-100"
