@@ -1,4 +1,4 @@
-@foreach (XotModel('tag')::with('post')->where('parent_id', app('request')->input('id'))->get() as $row)
+@foreach ($rows as $row)
     <a href="{{ route('container0.index', ['lang' => App::getLocale(), 'container0' => 'addition', 'id' => $row->id]) }}"
         style="color: rgb(24, 24, 24)">
         <div class="w-100"
@@ -19,12 +19,14 @@
                     {{ $row->title }}</h5>
                 <p
                     style="float: right;display: inline-block;width: 55px;font-family: Montserrat, sans-serif;font-weight: bold;color: rgb(120,127,135); margin-right:8px; margin-top: 13px">
-                    € {{ number_format(floatval($row->price),2,',','') }}</p>
+                    € {{ number_format(floatval($row->prices[0]->price),2,',','') }}</p>
             </div>
+
+            {{-- @foreach($row->prices as $value) {{ $value->price; }} @endforeach --}} {{-- USALO PER AVERE TUTTI I PREZZI, ANCHE QUELLI MAXI --}}
 
             <div class="w-100" style="display: inline-block;padding: 11px;">
                 <p style="display: inline-block;padding-bottom: 0px;width: 255px;margin-left: 0px;margin-bottom: 0px;">
-                    {{ $row->recipe }}</p>
+                    {{ $row->txt }}</p>
     </a>
 
 
