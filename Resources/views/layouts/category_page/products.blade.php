@@ -72,8 +72,6 @@
 
     </div>
     </div>
-
-
 @endforeach
 
 <div style="margin-bottom: 80px"></div>

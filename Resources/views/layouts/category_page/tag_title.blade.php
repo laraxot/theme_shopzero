@@ -1,7 +1,9 @@
 @php
-    $title=XotModel('post')::where('guid', '=', $items[0])->firstOrFail()->title;
+    //$title=XotModel('post')::where('guid', '=', $items[0])->firstOrFail()->title;
+    //$title = ->
+    //dddx($_panel->getParent())
+    //dddx(get_defined_vars());
 @endphp
-
 <a href="{{ route('container0.index', ['lang' => App::getLocale(), 'container0' => '/']) }}"
     style="text-decoration: none">
     <h5
@@ -11,6 +13,6 @@
             <path fill-rule="evenodd"
                 d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z">
             </path>
-        </svg>{{ $title }}
+        </svg>{{-- $title --}}
     </h5>
 </a>
