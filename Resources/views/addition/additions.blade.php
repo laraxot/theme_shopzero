@@ -51,7 +51,7 @@
         Aggiunte
     </button>
     <div class="accordion__content">
-        @foreach (XotModel('tag')::with('post')->where('parent_id', app('request')->input('id'))->get() as $row)
+        @foreach ($rows as $row)
             <!--<button type="button" onClick="clicks++;updateClickCount();" id="push">-->
             <button class="w-100" style="background:#F8F9FA; border:none; display:inline-block;">
                 <div class="w-100"
@@ -65,7 +65,7 @@
 
                                 <h5 class="w-50"
                                     style="display: inline-block;margin: 0px;margin-top: 0px;padding-bottom: 0px;font-family: Montserrat, sans-serif;font-weight: bold;margin-bottom: 15px;padding-top: 0px;background: rgba(255,36,36,0);width: 219px;text-align: left;font-size: 18px;">
-                                    + {{ $row->description }}</h5>
+                                    + {{ $row->title }}</h5>
 
                                 <h5 class="qt_addition"
                                     style="visibility:hidden;display: inline-block;text-align: right;color: rgb(0,0,0);font-family: Montserrat, sans-serif; font-size: 18px">
@@ -76,7 +76,7 @@
                                 <div style="display: inline-block; text-align: right">
                                     <h5
                                         style="display: inline-block;text-align: right;color: rgb(128,128,128);font-family: Montserrat, sans-serif;font-size: 18px">
-                                        <span>€ </span><span class="prz_addition">{{ number_format($row->price, 2, ',', ''); }}</span>
+                                        <span>€ </span><span class="prz_addition">{{ number_format($row->prices[0]->price,2,',',''); }}</span>
                                     </h5>
                                 </div>
                             </div>
