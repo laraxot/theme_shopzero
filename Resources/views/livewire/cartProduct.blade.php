@@ -25,8 +25,6 @@ $fixed = array();
 
 foreach($fixed as $index=>$value){
 
-    
-
     @endphp
 
     <div style="padding-bottom: 0px;">
