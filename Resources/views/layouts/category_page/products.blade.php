@@ -1,5 +1,11 @@
+@php
+$category = XotModel('post')
+    ->where('guid', $params['item0'])
+    ->get()
+    ->first()->guid;
+@endphp
 @foreach ($rows as $row)
-    <a href="{{ route('container0.index', ['lang' => App::getLocale(), 'container0' => 'addition', 'id' => $row->id]) }}"
+    <a href="{{ route('container0.container1.container2.container3.index', ['lang' => App::getLocale(), 'container0' => 'tags', 'item0' => $category, 'container1' => 'products', 'item1' => $row->guid, 'container2' => 'itemCats', 'item2' => 'aggiunte-pizze', 'container3' => 'productItems']) }}"
         style="color: rgb(24, 24, 24)">
         <div class="w-100"
             style="background: #e6e6e6a4;margin-left: 0px;width: 314px;border-radius: 15px;margin-bottom: 20px;">

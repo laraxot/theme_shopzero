@@ -8,16 +8,18 @@
 /* DA CORREGGERE ASSOLUTAMENTE (MALEBESTIA PENSACI TU E COMMENTA ! :D ) */
 
 $title = XotModel('post')
-    ->where('guid', $params["item1"])
+    ->where('guid', $params['item1'])
     ->get()
     ->first()->title;
 
-
-    /*dddx($params);*/
-
+$category = XotModel('post')
+    ->where('guid', $params['item0'])
+    ->get()
+    ->first()->guid;
+/*dddx($params);*/
 @endphp
 
-<a href="{{ route('container0.index', ['lang' => App::getLocale(), 'container0' => 'product', 'id' => app('request')->input('id')]) }}"
+<a href="{{ route('container0.container1.index', ['lang' => App::getLocale(), 'container0' => 'tags', 'item0' => $category, 'container1' => 'products']) }}"
     style="text-decoration: none; color:rgb(33,37,41)">
     <h1
         style="margin-top: 100px;font-family: Montserrat, sans-serif;padding-left: 0px;font-weight: bold;margin-bottom: 20px;">
