@@ -58,7 +58,7 @@
             }
         }
 
-        /*document.getElementById("prezzo").innerHTML = "&euro; " + totalPrice.toFixed(2);*/
+        document.getElementById("prezzo").innerHTML = "&euro; " + totalPrice.toFixed(2);
 
     }
 </script>
