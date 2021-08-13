@@ -23,7 +23,7 @@
         </div>
 
 
-         @livewire('shop::cart',['row'=>XotModel('shop')])
+         @livewire('shop::cart',['row'=>XotModel('shop'),'product'=>$product])
         {{-- @livewire('shop::buttonAddCart') --}}
 
     </div>
