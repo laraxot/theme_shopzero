@@ -1,25 +1,5 @@
-@php
 
-//dddx($items[1]);
-//dddx(XotModel('post')->where("guid",$items[1])->get()->first()->title);
-
-/* METODO TEMPORANEO PERCHE' NON SO COME ACCEDERE AL TITOLO DEL PRODOTTO SUPERIORE */
-/* $item[1] in sto caso corrisponderebbe al container products */
-/* DA CORREGGERE ASSOLUTAMENTE (MALEBESTIA PENSACI TU E COMMENTA ! :D ) */
-
-$title = XotModel('post')
-    ->where('guid', $params['item1'])
-    ->get()
-    ->first()->title;
-
-$category = XotModel('post')
-    ->where('guid', $params['item0'])
-    ->get()
-    ->first()->guid;
-/*dddx($params);*/
-@endphp
-
-<a href="{{ route('container0.container1.index', ['container0' => 'tags', 'item0' => $category, 'container1' => 'products']) }}"
+<a href="{{ route('container0.container1.index', ['lang' => App::getLocale(), 'container0' => 'tags', 'item0' => $categoryGuid, 'container1' => 'products']) }}"
     style="text-decoration: none; color:rgb(33,37,41)">
     <h1
         style="margin-top: 100px;font-family: Montserrat, sans-serif;padding-left: 0px;font-weight: bold;margin-bottom: 20px;">
@@ -28,6 +8,6 @@ $category = XotModel('post')
             <path fill-rule="evenodd"
                 d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z">
             </path>
-        </svg>{{ $title }}
+        </svg>{{ $product["title"] }}
     </h1>
 </a>
