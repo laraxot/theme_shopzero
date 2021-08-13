@@ -19,7 +19,7 @@ $category = XotModel('post')
 /*dddx($params);*/
 @endphp
 
-<a href="{{ route('container0.container1.index', ['lang' => App::getLocale(), 'container0' => 'tags', 'item0' => $category, 'container1' => 'products']) }}"
+<a href="{{ route('container0.container1.index', ['container0' => 'tags', 'item0' => $category, 'container1' => 'products']) }}"
     style="text-decoration: none; color:rgb(33,37,41)">
     <h1
         style="margin-top: 100px;font-family: Montserrat, sans-serif;padding-left: 0px;font-weight: bold;margin-bottom: 20px;">
