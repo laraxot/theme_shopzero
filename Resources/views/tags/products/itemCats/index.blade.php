@@ -1,0 +1,3 @@
+@php
+dddx($rows);
+@endphp
