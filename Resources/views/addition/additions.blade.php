@@ -45,6 +45,7 @@
 
 </style>
 
+{{ dddx($row->prices) }}
 
 <div class="accordion">
     <button type="button" class="accordion__button" id="aggiunte">
@@ -78,7 +79,7 @@
                                     <h5
                                         style="display: inline-block;text-align: right;color: rgb(128,128,128);font-family: Montserrat, sans-serif;font-size: 18px">
                                         <span>€ </span><span
-                                            class="prz_addition">{{ number_format($row->prices[0]->price, 2, ',', '') }}</span>
+                                            class="prz_addition">{{-- number_format($row->prices[0]->price,2,',','') --}}</span>
                                     </h5>
                                 </div>
                             </div>
@@ -183,7 +184,7 @@
                                     <h5
                                         style="display: inline-block;text-align: right;color: rgb(128,128,128);font-family: Montserrat, sans-serif;font-size: 18px">
                                         <span>€ </span><span
-                                            class="prz_addition">{{ number_format($row->prices[0]->price, 2, ',', '') }}</span>
+                                            class="prz_addition">{{-- number_format($row->prices[0]->price,2,',','') --}}</span>
                                     </h5>
                                 </div>
                             </div>
