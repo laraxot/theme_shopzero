@@ -7,7 +7,7 @@
 	}
 @endphp
 
-<div class="col-sm-{{ $field->col_bs_size}}">
+<div class="col-sm-{{ $field->col_size}}">
 
 <div class="form-group{{ $errors->has($name) ? ' has-error' : '' }}">
 	{{ $label }}
